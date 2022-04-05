@@ -4,14 +4,14 @@ const ContactItem = (props) => {
       <td>
         <picture>
           <img
-            class="contact-picture"
+            className="contact-picture"
             src={props.pictureUrl}
             alt={props.name}
           />
         </picture>
       </td>
       <td>{props.name}</td>
-      <td>{props.popularity}</td>
+      <td>{Math.round(props.popularity * 100) / 100}</td>
       <td>{props.wonOscar}</td>
       <td>{props.wonOscar ? <>🏆</> : <></>}</td>
       <td>{props.wonEmmy ? <>🏆</> : <></>}</td>
